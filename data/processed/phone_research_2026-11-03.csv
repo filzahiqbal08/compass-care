@@ -1,0 +1,21 @@
+site_key,name,new_phone,confidence,source
+NHSC4475997895,Indian Health Council - Administration and Rincon Clinic,760-749-1410,High,Indian Health Council website (indianhealth.com/about-us) and IHS.gov
+NHSC6195690326,Indian Health Council - Santa Ysabel Clinic,760-765-4203,High,Indian Health Council website; official address is 110 1/2 School House Canyon Rd
+NHSC9507775855,Southern Indian Health Council - Campo Clinic,619-445-1188 x150,High,Southern Indian Health Council website (sihc.org/locations)
+NHSC8896131918,Southern Indian Health Council - Kumeyaay Wellness Center,619-445-1188 x210,High,Southern Indian Health Council website (sihc.org/locations)
+NHSC3961224564,Sycuan Band of the Kumeyaay Nation - Sycuan Medical and Dental Center,619-445-0707,High,IHS.gov Sycuan Medical Dental Center profile
+NHSC5987520533,San Diego American Indian Health Center - Behavioral Health Office,619-234-2158,High,IHS.gov San Diego American Indian Health Center profile (2602 First Ave)
+NHSC9138592439,San Diego Family Care - Rosa Parks Elementary SBHC,619-280-2058,High,"San Diego Family Care website (sdfamilycare.org/locations), 4510 Landis St"
+NHSC8037266134,San Ysidro Health - Mollison,619-662-4100,High,San Ysidro Health Mollison listing (505 N Mollison Ave); SYH main line
+NHSC9868008253,Borrego STAT Care,760-837-0321,High,"Federal provider registry (NPI) listing, 587 Palm Canyon Dr"
+CMS0000023466,Direct Care Nursing Corporation,760-855-6416,High,"Federal provider registry (NPI) listing, 739 E Pennsylvania Ave"
+NHSC1981505465,Family Health Centers of San Diego - El Cajon Youth Counseling Center,619-515-2365,High,"Federal provider registry (NPI) listing, 680 Fletcher Pkwy Ste 200"
+NHSC7223345822,TrueCare- Older Adults,760-736-6767,High,"TrueCare website, Older Adult Health Center, 1595 Grand Ave San Marcos; TrueCare main line"
+NHSC8372324173,San Diego Family Care - Central Elementary SBHC,619-280-2058,Medium,"San Diego Family Care website; Central Elementary center listed at 3878 Orange Ave, our record says 4063 Polk Ave"
+NHSC8211437020,La Maestra Family clinic,619-280-4213,Medium,San Diego County dental clinic list: La Maestra main clinic at 4060 Fairmount Ave (ours: 4056)
+NHSC3639750338,TrueCare - La Mission,760-736-6767,Medium,"TrueCare website, La Mision at 3220 Mission Ave (ours: 32 Mission Ave); TrueCare main line"
+NHSC8859692616,San Ysidro Health - Otay Family Health Center,619-662-4100,Medium,San Ysidro Health main line (county dental clinic list); Otay clinic listed at 1637 Third Ave (ours: 37 3rd Ave)
+NHSC3040690883,San Ysidro Health - Mi Clinica Northgate,619-662-4100,Medium,San Ysidro Health main line (county dental clinic list)
+NHSC1980302352,SYHC - South Bay Family Dental Center,619-662-4100,Medium,San Ysidro Health main line (county dental clinic list)
+NHSC3851456523,San Ysidro Health - Youth Enhancement Services,619-662-4100,Medium,San Ysidro Health main line (county dental clinic list); program-specific line (619) 428-5533 is at a different address
+NHSC1614044534,San Ysidro Health - Chaldean & Middle Eastern Social Services,619-662-4100,Medium,San Ysidro Health main line (county dental clinic list); program-specific line (619) 631-7400 is at a different address

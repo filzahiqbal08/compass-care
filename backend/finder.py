@@ -21,6 +21,13 @@ import sqlite3
 from dataclasses import dataclass
 
 DB_PATH = "compass_care.db"
+
+# Plain-language messages shown to the person when their ZIP can't be searched.
+MSG_INVALID_ZIP = "Please enter all 5 digits of your ZIP code (for example, 92105)."
+MSG_ZIP_NOT_FOUND = ("We couldn't find that ZIP code. Please check the digits. "
+                     "Compass Care currently covers San Diego County only.")
+MSG_OUTSIDE_COUNTY = ("That ZIP code is outside San Diego County. "
+                      "Compass Care currently covers San Diego County only.")
 EARTH_RADIUS_MILES = 3958.8  # same assumption as Location_Test!$E$3 in Excel
 
 
@@ -43,13 +50,13 @@ class Site:
     address: str
     city: str
     zip5: str
-    phone: str
+    phone: str | None            # None = not available
     services: str
-    organization: str
-    languages: str
-    language_confidence: str
-    insurance_note: str
-    insurance_confidence: str
+    organization: str | None     # None = not applicable (no parent organization)
+    languages: str | None        # None = not listed
+    language_confidence: str | None
+    insurance_note: str | None   # None = not listed
+    insurance_confidence: str | None
     lat: float
     lon: float
     distance_miles: float = None   # rounded, for display
@@ -61,9 +68,11 @@ def _row_to_site(row):
     return Site(
         site_key=row["site_key"], name=row["name"], site_group=row["site_group"],
         address=row["address"], city=row["city"], zip5=row["zip5"], phone=row["phone"],
-        services=row["services"] or "", organization=row["organization"] or "",
-        languages=row["languages"] or "", language_confidence=row["language_confidence"] or "",
-        insurance_note=row["insurance_note"] or "", insurance_confidence=row["insurance_confidence"] or "",
+        # Missing values stay None (NULL in the database) instead of "" so the
+        # API sends a real null and every front end treats "not listed" the same way.
+        services=row["services"] or "", organization=row["organization"],
+        languages=row["languages"], language_confidence=row["language_confidence"],
+        insurance_note=row["insurance_note"], insurance_confidence=row["insurance_confidence"],
         lat=row["lat"], lon=row["lon"],
     )
 
@@ -119,11 +128,17 @@ def find_nearest(conn, zip5, site_group="Public sites", service="Any", language=
           "results": [Site, ...], # up to `limit` results, matches first, fallback after
         }
     """
+    zip5 = (zip5 or "").strip()
+    if not (len(zip5) == 5 and zip5.isdigit()):
+        return {"zip": zip5, "status": "Invalid ZIP", "matches": 0,
+                "message": MSG_INVALID_ZIP, "results": []}
     zip_info = get_zip_info(conn, zip5)
     if zip_info is None:
-        return {"zip": zip5, "status": "ZIP not found in the list", "matches": 0, "message": "", "results": []}
+        return {"zip": zip5, "status": "ZIP not found in the list", "matches": 0,
+                "message": MSG_ZIP_NOT_FOUND, "results": []}
     if zip_info["county"] != "San Diego County":
-        return {"zip": zip5, "status": "Outside San Diego County: out of scope", "matches": 0, "message": "", "results": []}
+        return {"zip": zip5, "status": "Outside San Diego County: out of scope", "matches": 0,
+                "message": MSG_OUTSIDE_COUNTY, "results": []}
 
     center_lat, center_lon = zip_info["lat"], zip_info["lon"]
 
@@ -144,10 +159,13 @@ def find_nearest(conn, zip5, site_group="Public sites", service="Any", language=
     matches.sort(key=lambda s: s._sort_distance)
 
     match_count = len(matches)
-    results = matches[:limit]
+    # limit=None means "show every matching site in the county". Even then,
+    # the fallback still tops up to 5 results when fewer than 5 sites match.
+    results = matches if limit is None else matches[:limit]
+    target = 5 if limit is None else limit
 
     message = ""
-    if match_count < limit:
+    if match_count < target:
         # Fallback: nearest Health center sites not already in the results.
         used_keys = {s.site_key for s in results}
         fallback_candidates = []
@@ -161,7 +179,7 @@ def find_nearest(conn, zip5, site_group="Public sites", service="Any", language=
             site.result_type = "Fallback"
             fallback_candidates.append(site)
         fallback_candidates.sort(key=lambda s: s._sort_distance)
-        results = results + fallback_candidates[: limit - match_count]
+        results = results + fallback_candidates[: target - match_count]
 
         if match_count == 0:
             message = "No sites match these filters. Showing the nearest health centers instead; call to ask."
@@ -175,6 +193,25 @@ def find_nearest(conn, zip5, site_group="Public sites", service="Any", language=
         "message": message,
         "results": results,
     }
+
+
+def list_all(conn, site_group="Public sites", service="Any", language="Any"):
+    """Every site in the database that matches the filters, A to Z by name.
+
+    No ZIP code needed (so no distances). Powers the "browse all clinics" switch.
+    Returns the same shape as find_nearest, with distance_miles left as None.
+    """
+    matches = []
+    for row in conn.execute("SELECT * FROM sites"):
+        if not _site_group_matches(row["site_group"], site_group):
+            continue
+        if not _service_matches(row["services"] or "", service):
+            continue
+        if not _language_matches(row["languages"] or "", language):
+            continue
+        matches.append(_row_to_site(row))
+    matches.sort(key=lambda s: (s.name or "").lower())
+    return {"zip": "", "status": "OK", "matches": len(matches), "message": "", "results": matches}
 
 
 def connect(db_path=DB_PATH):
