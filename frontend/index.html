@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compass Care — Find a Clinic Near You</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">&#10148;</span>
+      <span class="brand-name">Compass Care</span>
+    </div>
+    <p class="tagline">Find a clinic near you in San Diego County</p>
+  </header>
+
+  <main class="layout">
+
+    <section class="search-panel" aria-label="Search for a clinic">
+      <form id="searchForm">
+
+        <label for="zip">ZIP code</label>
+        <input
+          type="text"
+          id="zip"
+          name="zip"
+          inputmode="numeric"
+          pattern="[0-9]{5}"
+          maxlength="5"
+          placeholder="e.g. 92105"
+          required
+        >
+
+        <label for="siteGroup">Type of site</label>
+        <select id="siteGroup" name="siteGroup">
+          <option value="Public sites" selected>Public sites (recommended)</option>
+          <option value="All">All sites</option>
+          <option value="Health center">Health centers</option>
+          <option value="Hospital">Hospitals</option>
+          <option value="Referral-only">Referral-only</option>
+          <option value="School">School-based clinics</option>
+        </select>
+
+        <label for="service">What do you need?</label>
+        <select id="service" name="service">
+          <option value="Any" selected>Any service</option>
+          <option value="Primary Care">Primary care</option>
+          <option value="Dental">Dental</option>
+          <option value="Optometry">Optometry / vision</option>
+          <option value="Mental Health">Mental health</option>
+          <option value="Pediatrics">Pediatrics</option>
+          <option value="OB/GYN">OB/GYN</option>
+          <option value="Pharmacy">Pharmacy</option>
+        </select>
+
+        <label for="language">Preferred language</label>
+        <select id="language" name="language">
+          <option value="Any" selected>Any language</option>
+          <option value="Spanish">Spanish</option>
+          <option value="Arabic">Arabic</option>
+          <option value="Vietnamese">Vietnamese</option>
+          <option value="Tagalog">Tagalog</option>
+          <option value="Somali">Somali</option>
+          <option value="Farsi">Farsi</option>
+          <option value="Mandarin">Mandarin</option>
+        </select>
+
+        <button type="submit" id="searchBtn">Search</button>
+      </form>
+    </section>
+
+    <section class="results-panel" aria-label="Search results">
+      <div id="statusMessage" class="status-message" hidden></div>
+      <div id="resultsList" class="results-list"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Data compiled from HRSA-listed San Diego County clinics. Call ahead to confirm hours, insurance, and language support.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

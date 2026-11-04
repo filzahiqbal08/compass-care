@@ -1,0 +1,15 @@
+# Python virtual environments (each person creates their own)
+venv/
+.venv/
+
+# Python build/cache files
+__pycache__/
+*.pyc
+
+# macOS / editor clutter
+.DS_Store
+.vscode/
+.idea/
+
+# Local secrets, if any are ever added
+.env

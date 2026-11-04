@@ -1,0 +1,338 @@
+<title>Compass Care Architecture</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: one vertical pipeline, top to bottom — each stage a card, connected
+   by labeled arrows, color-tagged by milestone (DATA / M1 / M2 / M3 / NEXT) */
+:root {
+  --bg: #f7f3ec;
+  --surface: #ffffff;
+  --ink: #223338;
+  --muted: #5f7076;
+  --border: #ddd7c8;
+  --accent: #21807a;
+  --display: 'Source Serif 4', Georgia, serif;
+  --body: 'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'IBM Plex Mono', 'SF Mono', Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #10181a;
+    --surface: #1a2426;
+    --ink: #e8edec;
+    --muted: #9bacaa;
+    --border: #2d3a3d;
+    --accent: #4fc3b4;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #10181a;
+  --surface: #1a2426;
+  --ink: #e8edec;
+  --muted: #9bacaa;
+  --border: #2d3a3d;
+  --accent: #4fc3b4;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  padding-block: 40px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 720px; margin: 0 auto; }
+
+header { margin-bottom: 28px; }
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+h1 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(28px, 5vw, 38px);
+  margin: 0 0 8px;
+  text-wrap: balance;
+}
+.dek {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 54ch;
+  margin: 0;
+}
+
+figure { margin: 0 0 32px; }
+.diagram-frame {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 10px;
+}
+svg { display: block; width: 100%; height: auto; }
+figcaption {
+  margin-top: 10px;
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  font-size: 12px;
+  font-family: var(--mono);
+  color: var(--muted);
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.key li { display: flex; align-items: center; gap: 6px; }
+.swatch { width: 14px; height: 14px; border-radius: 4px; flex: none; }
+
+section.notes h2 {
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+.stage-group { margin-bottom: 22px; }
+.stage-group h3 {
+  font-size: 12px;
+  font-family: var(--mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 8px;
+}
+ol.stages {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+ol.stages li { margin-bottom: 8px; }
+ol.stages li::marker { color: var(--muted); font-family: var(--mono); font-size: 12px; }
+code {
+  font-family: var(--mono);
+  font-size: 0.92em;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+footer {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 12.5px;
+  color: var(--muted);
+}
+</style>
+
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">System diagram · for presentations &amp; reports</p>
+    <h1>Compass Care Architecture</h1>
+    <p class="dek">How one ZIP code typed into the app turns into five nearby clinics — from the raw federal dataset down to the browser, across all three build milestones.</p>
+  </header>
+
+  <figure>
+    <div class="diagram-frame">
+      <svg viewBox="0 0 640 1220" role="img" aria-label="Pipeline diagram showing data flowing from the national HRSA dataset through Excel cleaning, a SQLite database, the finder.py matching logic, the FastAPI endpoint, and finally the browser front end, with a dashed final step to future Oracle Cloud hosting.">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--ink)"></path>
+          </marker>
+        </defs>
+
+        <!-- B1: raw national dataset -->
+        <rect x="40" y="20" width="560" height="62" rx="10" fill="var(--surface)" stroke="var(--border)"></rect>
+        <rect x="470" y="28" width="56" height="18" rx="9" fill="#8a97a1"></rect>
+        <text x="498" y="40.5" text-anchor="middle" font-family="var(--mono)" font-size="9.5" font-weight="600" fill="#ffffff">DATA</text>
+        <text x="60" y="46" font-family="var(--mono)" font-size="14" font-weight="600" fill="var(--ink)">SITE_DASHBOARD.csv</text>
+        <text x="60" y="66" font-family="var(--body)" font-size="11.5" fill="var(--muted)">129,141 sites · nationwide (HRSA)</text>
+
+        <line x1="320" y1="82" x2="320" y2="114" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#arrow)"></line>
+        <text x="335" y="102" font-family="var(--body)" font-size="11" font-style="italic" fill="var(--muted)">filter by ZIP code</text>
+
+        <!-- B2: SD subset -->
+        <rect x="40" y="118" width="560" height="62" rx="10" fill="var(--surface)" stroke="var(--border)"></rect>
+        <rect x="470" y="126" width="56" height="18" rx="9" fill="#8a97a1"></rect>
+        <text x="498" y="138.5" text-anchor="middle" font-family="var(--mono)" font-size="9.5" font-weight="600" fill="#ffffff">DATA</text>
+        <text x="60" y="144" font-family="var(--mono)" font-size="14" font-weight="600" fill="var(--ink)">san_diego_sites.csv</text>
+        <text x="60" y="164" font-family="var(--body)" font-size="11.5" fill="var(--muted)">1,146 rows · San Diego County only</text>
+
+        <line x1="320" y1="180" x2="320" y2="212" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#arrow)"></line>
+        <text x="335" y="200" font-family="var(--body)" font-size="11" font-style="italic" fill="var(--muted)">dedupe, classify &amp; research (Excel)</text>
+
+        <!-- B3: Excel workbook -->
+        <rect x="40" y="216" width="560" height="100" rx="10" fill="var(--surface)" stroke="var(--border)"></rect>
+        <rect x="470" y="224" width="56" height="18" rx="9" fill="#21807a"></rect>
+        <text x="498" y="236.5" text-anchor="middle" font-family="var(--mono)" font-size="9.5" font-weight="600" fill="#ffffff">M1</text>
+        <text x="60" y="242" font-family="var(--mono)" font-size="14" font-weight="600" fill="var(--ink)">compass_care_milestone1.xlsx</text>
+        <text x="60" y="264" font-family="var(--body)" font-size="11.5" fill="var(--muted)">731 deduped sites · 5 site groups · services tagged</text>
+        <text x="60" y="282" font-family="var(--body)" font-size="11.5" fill="var(--muted)">org-level languages &amp; insurance · 14 hand-built test cases</text>
+        <text x="60" y="303" font-family="var(--body)" font-size="11" fill="var(--muted)" font-style="italic">Top_5_Nearest tab holds the lookup logic end to end</text>
+
+        <line x1="320" y1="316" x2="320" y2="348" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#arrow)"></line>
+        <text x="335" y="336" font-family="var(--body)" font-size="11" font-style="italic" fill="var(--muted)">export tabs → CSV</text>
+
+        <!-- B4a / B4b: two CSVs -->
+        <rect x="40" y="352" width="270" height="56" rx="10" fill="var(--surface)" stroke="var(--border)"></rect>
+        <rect x="222" y="360" width="46" height="18" rx="9" fill="#21807a"></rect>
+        <text x="245" y="372.5" text-anchor="middle" font-family="var(--mono)" font-size="9.5" font-weight="600" fill="#ffffff">M1</text>
+        <text x="58" y="378" font-family="var(--mono)" font-size="13" font-weight="600" fill="var(--ink)">sd_sites.csv</text>
+        <text x="58" y="396" font-family="var(--body)" font-size="11" fill="var(--muted)">731 rows</text>
+
+        <rect x="330" y="352" width="270" height="56" rx="10" fill="var(--surface)" stroke="var(--border)"></rect>
+        <rect x="512" y="360" width="46" height="18" rx="9" fill="#21807a"></rect>
+        <text x="535" y="372.5" text-anchor="middle" font-family="var(--mono)" font-size="9.5" font-weight="600" fill="#ffffff">M1</text>
+        <text x="348" y="378" font-family="var(--mono)" font-size="13" font-weight="600" fill="var(--ink)">zip_centroids.csv</text>
+        <text x="348" y="396" font-family="var(--body)" font-size="11" fill="var(--muted)">265+ rows</text>
+
+        <line x1="175" y1="408" x2="310" y2="432" stroke="var(--ink)" stroke-width="1.4"></line>
+        <line x1="465" y1="408" x2="330" y2="432" stroke="var(--ink)" stroke-width="1.4"></line>
+        <line x1="320" y1="432" x2="320" y2="450" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#arrow)"></line>
+        <text x="335" y="428" font-family="var(--body)" font-size="11" font-style="italic" fill="var(--muted)">load into SQLite</text>
+
+        <!-- B5: SQLite db -->
+        <rect x="40" y="454" width="560" height="62" rx="10" fill="var(--surface)" stroke="var(--border)"></rect>
+        <rect x="470" y="462" width="56" height="18" rx="9" fill="#1b3a4b"></rect>
+        <text x="498" y="474.5" text-anchor="middle" font-family="var(--mono)" font-size="9.5" font-weight="600" fill="#ffffff">M2</text>
+        <text x="60" y="480" font-family="var(--mono)" font-size="14" font-weight="600" fill="var(--ink)">compass_care.db</text>
+        <text x="60" y="500" font-family="var(--body)" font-size="11.5" fill="var(--muted)">tables: sites, zip_centroids (indexed)</text>
+
+        <line x1="320" y1="516" x2="320" y2="548" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#arrow)"></line>
+        <text x="335" y="536" font-family="var(--body)" font-size="11" font-style="italic" fill="var(--muted)">query + compute distance</text>
+
+        <!-- B6: finder.py -->
+        <rect x="40" y="552" width="560" height="100" rx="10" fill="var(--surface)" stroke="var(--border)"></rect>
+        <rect x="470" y="560" width="56" height="18" rx="9" fill="#1b3a4b"></rect>
+        <text x="498" y="572.5" text-anchor="middle" font-family="var(--mono)" font-size="9.5" font-weight="600" fill="#ffffff">M2</text>
+        <text x="60" y="578" font-family="var(--mono)" font-size="14" font-weight="600" fill="var(--ink)">finder.py — find_nearest()</text>
+        <text x="60" y="600" font-family="var(--body)" font-size="11.5" fill="var(--muted)">filter by site group / service / language</text>
+        <text x="60" y="618" font-family="var(--body)" font-size="11.5" fill="var(--muted)">haversine distance → sort → health-center fallback</text>
+
+        <rect x="150" y="660" width="340" height="26" rx="13" fill="none" stroke="var(--accent)" stroke-width="1.3"></rect>
+        <text x="320" y="677.5" text-anchor="middle" font-family="var(--mono)" font-size="11" font-weight="600" fill="var(--accent)">✓ 14/14 vs Answer_Key — test_finder.py</text>
+
+        <line x1="320" y1="686" x2="320" y2="718" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#arrow)"></line>
+        <text x="335" y="706" font-family="var(--body)" font-size="11" font-style="italic" fill="var(--muted)">wrap as REST endpoint</text>
+
+        <!-- B7: api.py -->
+        <rect x="40" y="722" width="560" height="86" rx="10" fill="var(--surface)" stroke="var(--border)"></rect>
+        <rect x="470" y="730" width="56" height="18" rx="9" fill="#1b3a4b"></rect>
+        <text x="498" y="742.5" text-anchor="middle" font-family="var(--mono)" font-size="9.5" font-weight="600" fill="#ffffff">M2</text>
+        <text x="60" y="748" font-family="var(--mono)" font-size="14" font-weight="600" fill="var(--ink)">api.py — FastAPI</text>
+        <text x="60" y="770" font-family="var(--mono)" font-size="11" fill="var(--muted)">GET /sites?zip=&amp;site_group=&amp;service=&amp;language=</text>
+        <text x="60" y="788" font-family="var(--body)" font-size="11" fill="var(--muted)" font-style="italic">returns JSON · CORS-enabled for the browser front end</text>
+
+        <rect x="150" y="816" width="340" height="26" rx="13" fill="none" stroke="var(--accent)" stroke-width="1.3"></rect>
+        <text x="320" y="833.5" text-anchor="middle" font-family="var(--mono)" font-size="11" font-weight="600" fill="var(--accent)">✓ 14/14 over HTTP — test_api.py</text>
+
+        <line x1="320" y1="842" x2="320" y2="874" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#arrow)"></line>
+        <text x="335" y="862" font-family="var(--body)" font-size="11" font-style="italic" fill="var(--muted)">fetch() from the browser</text>
+
+        <!-- B8: frontend -->
+        <rect x="40" y="878" width="560" height="86" rx="10" fill="var(--surface)" stroke="var(--border)"></rect>
+        <rect x="470" y="886" width="56" height="18" rx="9" fill="#a6690f"></rect>
+        <text x="498" y="898.5" text-anchor="middle" font-family="var(--mono)" font-size="9.5" font-weight="600" fill="#ffffff">M3</text>
+        <text x="60" y="904" font-family="var(--mono)" font-size="14" font-weight="600" fill="var(--ink)">frontend/ — index.html · style.css · app.js</text>
+        <text x="60" y="926" font-family="var(--body)" font-size="11.5" fill="var(--muted)">ZIP form + filters → calls /sites → renders result cards</text>
+        <text x="60" y="944" font-family="var(--body)" font-size="11" fill="var(--muted)" font-style="italic">plain HTML/CSS/JS — no framework, no build step</text>
+
+        <line x1="320" y1="964" x2="320" y2="996" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#arrow)"></line>
+        <text x="335" y="984" font-family="var(--body)" font-size="11" font-style="italic" fill="var(--muted)">user types ZIP, clicks Search</text>
+
+        <!-- B9: browser -->
+        <rect x="40" y="1000" width="560" height="62" rx="10" fill="var(--surface)" stroke="var(--border)"></rect>
+        <rect x="470" y="1008" width="56" height="18" rx="9" fill="#a6690f"></rect>
+        <text x="498" y="1020.5" text-anchor="middle" font-family="var(--mono)" font-size="9.5" font-weight="600" fill="#ffffff">M3</text>
+        <text x="60" y="1026" font-family="var(--mono)" font-size="14" font-weight="600" fill="var(--ink)">Browser — 127.0.0.1:5500</text>
+        <text x="60" y="1046" font-family="var(--body)" font-size="11.5" fill="var(--muted)">shows the 5 nearest clinics · local machine only</text>
+
+        <line x1="320" y1="1062" x2="320" y2="1100" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="5 5" marker-end="url(#arrow)"></line>
+        <text x="335" y="1085" font-family="var(--body)" font-size="11" font-style="italic" fill="var(--muted)">deploy + update API_BASE_URL</text>
+
+        <!-- B10: future Oracle hosting -->
+        <rect x="40" y="1108" width="560" height="76" rx="10" fill="var(--surface)" stroke="var(--muted)" stroke-width="1.3" stroke-dasharray="5 5"></rect>
+        <rect x="470" y="1116" width="56" height="18" rx="9" fill="none" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="3 3"></rect>
+        <text x="498" y="1128.5" text-anchor="middle" font-family="var(--mono)" font-size="9.5" font-weight="600" fill="var(--muted)">NEXT</text>
+        <text x="60" y="1134" font-family="var(--mono)" font-size="14" font-weight="600" fill="var(--muted)">Oracle Cloud hosting (planned)</text>
+        <text x="60" y="1154" font-family="var(--body)" font-size="11.5" fill="var(--muted)">backend + frontend get one public URL — shareable to anyone</text>
+        <text x="60" y="1172" font-family="var(--body)" font-size="11" fill="var(--muted)" font-style="italic">not yet built</text>
+      </svg>
+    </div>
+    <figcaption>Figure 1. Data and process flow from the raw federal dataset to the live app, with the two points where the Python rebuild was checked against the hand-tested Excel logic.</figcaption>
+  </figure>
+
+  <ul class="key" aria-hidden="true">
+    <li><span class="swatch" style="background:#8a97a1"></span> Data prep</li>
+    <li><span class="swatch" style="background:#21807a"></span> Milestone 1 · Excel</li>
+    <li><span class="swatch" style="background:#1b3a4b"></span> Milestone 2 · Backend</li>
+    <li><span class="swatch" style="background:#a6690f"></span> Milestone 3 · Front end</li>
+    <li><span class="swatch" style="border:1.5px dashed var(--muted); background:transparent"></span> Planned next step</li>
+  </ul>
+
+  <section class="notes">
+    <h2>Stage-by-stage notes</h2>
+
+    <div class="stage-group">
+      <h3>Data preparation</h3>
+      <ol class="stages" start="1">
+        <li>Started from <code>SITE_DASHBOARD.csv</code>, the full HRSA federal listing of <strong>129,141</strong> clinic sites nationwide.</li>
+        <li>Filtered to San Diego County ZIP codes, producing <code>san_diego_sites.csv</code> — <strong>1,146</strong> raw rows.</li>
+      </ol>
+    </div>
+
+    <div class="stage-group">
+      <h3>Milestone 1 — Excel</h3>
+      <ol class="stages" start="3">
+        <li>Deduplicated and classified every site by hand in <code>compass_care_milestone1.xlsx</code>: <strong>731</strong> unique sites sorted into 5 site groups, tagged with services, and matched to organization-level languages and insurance notes. The <code>Top_5_Nearest</code> tab holds the full matching logic, checked against 14 hand-built test cases in the <code>Answer_Key</code> tab.</li>
+        <li>Exported the finished tabs as flat files: <code>sd_sites.csv</code> (731 rows) and <code>zip_centroids.csv</code> (265+ ZIP centers).</li>
+      </ol>
+    </div>
+
+    <div class="stage-group">
+      <h3>Milestone 2 — Python backend</h3>
+      <ol class="stages" start="5">
+        <li>Loaded both CSVs into <code>compass_care.db</code>, a SQLite database with indexed <code>sites</code> and <code>zip_centroids</code> tables.</li>
+        <li>Rebuilt the Excel logic in <code>finder.py</code> — <code>find_nearest()</code> filters by group/service/language, measures real distance with the haversine formula, sorts, and backfills with nearby health centers if too few sites match. Verified <strong>14/14</strong> against the Excel Answer_Key.</li>
+        <li>Wrapped that function in <code>api.py</code> (FastAPI), exposing it as a web endpoint — <code>GET /sites</code> — with CORS enabled so a browser front end can call it. Re-verified <strong>14/14</strong> over real HTTP requests.</li>
+      </ol>
+    </div>
+
+    <div class="stage-group">
+      <h3>Milestone 3 — Front end</h3>
+      <ol class="stages" start="8">
+        <li>Built a plain HTML/CSS/JavaScript page (<code>frontend/</code>) that calls the API and renders real results as clinic cards.</li>
+        <li>Confirmed end to end on a local machine: typing a ZIP code returns real, correctly-ordered results, including the fallback case.</li>
+      </ol>
+    </div>
+
+    <div class="stage-group">
+      <h3>Next — hosting</h3>
+      <ol class="stages" start="10">
+        <li>Currently runs only on <code>127.0.0.1</code> — not reachable by anyone else. Deploying <code>backend/</code> and <code>frontend/</code> to Oracle Cloud and updating one line (<code>API_BASE_URL</code> in <code>app.js</code>) will give the app a real, shareable public address.</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>
+    Prepared for Compass Care project review · reflects the build as of October 2026 · Milestones 1–3 complete and verified; public hosting is the next planned step.
+  </footer>
+
+</div>

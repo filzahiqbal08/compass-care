@@ -1,0 +1,266 @@
+zip,city,county,lat,lon,zip_type
+90620,Buena Park,Orange County,33.8439,-118.008,STANDARD
+90621,Buena Park,Orange County,33.8772,-117.9893,STANDARD
+90623,La Palma,Orange County,33.8491,-118.0398,STANDARD
+90630,Cypress,Orange County,33.8181,-118.0357,STANDARD
+90631,La Habra,Orange County,33.9331,-117.9493,STANDARD
+90680,Stanton,Orange County,33.7991,-117.9956,STANDARD
+90720,Los Alamitos,Orange County,33.7956,-118.0648,STANDARD
+90740,Seal Beach,Orange County,33.7602,-118.0808,STANDARD
+91752,Mira Loma,Riverside County,33.9938,-117.5236,STANDARD
+91901,Alpine,San Diego County,32.8282,-116.7543,STANDARD
+91902,Bonita,San Diego County,32.6671,-117.0221,STANDARD
+91905,Boulevard,San Diego County,32.6719,-116.32,STANDARD
+91906,Campo,San Diego County,32.6605,-116.4905,STANDARD
+91910,Chula Vista,San Diego County,32.6371,-117.0676,STANDARD
+91911,Chula Vista,San Diego County,32.6084,-117.0565,STANDARD
+91913,Chula Vista,San Diego County,32.6513,-116.9852,STANDARD
+91914,Chula Vista,San Diego County,32.6587,-116.9652,STANDARD
+91915,Chula Vista,San Diego County,32.6315,-116.9408,STANDARD
+91916,Descanso,San Diego County,32.873,-116.6027,STANDARD
+91917,Dulzura,San Diego County,32.6152,-116.7285,STANDARD
+91932,Imperial Beach,San Diego County,32.5783,-117.1148,STANDARD
+91934,Jacumba,San Diego County,32.6249,-116.1952,STANDARD
+91935,Jamul,San Diego County,32.7163,-116.8323,STANDARD
+91941,La Mesa,San Diego County,32.7604,-117.0115,STANDARD
+91942,La Mesa,San Diego County,32.7835,-117.0189,STANDARD
+91945,Lemon Grove,San Diego County,32.7332,-117.0326,STANDARD
+91950,National City,San Diego County,32.6749,-117.0897,STANDARD
+91962,Pine Valley,San Diego County,32.835,-116.5127,STANDARD
+91963,Potrero,San Diego County,32.6205,-116.6037,STANDARD
+91977,Spring Valley,San Diego County,32.724,-116.9976,STANDARD
+91978,Spring Valley,San Diego County,32.7329,-116.9596,STANDARD
+91980,Tecate,San Diego County,32.5889,-116.6192,STANDARD
+92003,Bonsall,San Diego County,33.294,-117.1897,STANDARD
+92004,Borrego Springs,San Diego County,33.2386,-116.3514,STANDARD
+92007,Cardiff By The Sea,San Diego County,33.023,-117.2745,STANDARD
+92008,Carlsbad,San Diego County,33.1602,-117.325,STANDARD
+92009,Carlsbad,San Diego County,33.0954,-117.2619,STANDARD
+92010,Carlsbad,San Diego County,33.1639,-117.3009,STANDARD
+92011,Carlsbad,San Diego County,33.1072,-117.2943,STANDARD
+92014,Del Mar,San Diego County,32.9665,-117.249,STANDARD
+92019,El Cajon,San Diego County,32.7777,-116.9191,STANDARD
+92020,El Cajon,San Diego County,32.7928,-116.9665,STANDARD
+92021,El Cajon,San Diego County,32.8178,-116.9223,STANDARD
+92024,Encinitas,San Diego County,33.0535,-117.2689,STANDARD
+92025,Escondido,San Diego County,33.1101,-117.07,STANDARD
+92026,Escondido,San Diego County,33.1605,-117.0978,STANDARD
+92027,Escondido,San Diego County,33.1388,-117.052,STANDARD
+92028,Fallbrook,San Diego County,33.369,-117.229,STANDARD
+92029,Escondido,San Diego County,33.0895,-117.1128,STANDARD
+92036,Julian,San Diego County,33.0534,-116.5658,STANDARD
+92037,La Jolla,San Diego County,32.8455,-117.2521,STANDARD
+92040,Lakeside,San Diego County,32.8562,-116.9201,STANDARD
+92054,Oceanside,San Diego County,33.2072,-117.3573,STANDARD
+92056,Oceanside,San Diego County,33.1968,-117.2831,STANDARD
+92057,Oceanside,San Diego County,33.2407,-117.3025,STANDARD
+92058,Oceanside,San Diego County,33.1959,-117.3795,STANDARD
+92059,Pala,San Diego County,33.3777,-117.0717,STANDARD
+92061,Pauma Valley,San Diego County,33.3063,-116.9596,STANDARD
+92064,Poway,San Diego County,32.9756,-117.0402,STANDARD
+92065,Ramona,San Diego County,33.0293,-116.8535,STANDARD
+92066,Ranchita,San Diego County,33.21,-116.5167,STANDARD
+92067,Rancho Santa Fe,San Diego County,33.005,-117.2157,PO BOX
+92069,San Marcos,San Diego County,33.1444,-117.1697,STANDARD
+92070,Santa Ysabel,San Diego County,33.1476,-116.6963,STANDARD
+92071,Santee,San Diego County,32.8486,-116.9862,STANDARD
+92075,Solana Beach,San Diego County,32.9937,-117.2598,STANDARD
+92078,San Marcos,San Diego County,33.1193,-117.185,STANDARD
+92081,Vista,San Diego County,33.1644,-117.2403,STANDARD
+92082,Valley Center,San Diego County,33.249,-117.0122,STANDARD
+92083,Vista,San Diego County,33.1978,-117.2482,STANDARD
+92084,Vista,San Diego County,33.2131,-117.2243,STANDARD
+92086,Warner Springs,San Diego County,33.3096,-116.6527,STANDARD
+92091,Rancho Santa Fe,San Diego County,32.9623,-117.0462,STANDARD
+92101,San Diego,San Diego County,32.7185,-117.1593,STANDARD
+92102,San Diego,San Diego County,32.7139,-117.1219,STANDARD
+92103,San Diego,San Diego County,32.7466,-117.1636,STANDARD
+92104,San Diego,San Diego County,32.7454,-117.1272,STANDARD
+92105,San Diego,San Diego County,32.7423,-117.0947,STANDARD
+92106,San Diego,San Diego County,32.7272,-117.2268,STANDARD
+92107,San Diego,San Diego County,32.7425,-117.2433,STANDARD
+92108,San Diego,San Diego County,32.7783,-117.1335,STANDARD
+92109,San Diego,San Diego County,32.7969,-117.2405,STANDARD
+92110,San Diego,San Diego County,32.7635,-117.2028,STANDARD
+92111,San Diego,San Diego County,32.7972,-117.1708,STANDARD
+92113,San Diego,San Diego County,32.697,-117.1153,STANDARD
+92114,San Diego,San Diego County,32.7059,-117.0524,STANDARD
+92115,San Diego,San Diego County,32.7607,-117.0721,STANDARD
+92116,San Diego,San Diego County,32.7624,-117.1242,STANDARD
+92117,San Diego,San Diego County,32.8239,-117.1965,STANDARD
+92118,Coronado,San Diego County,32.6807,-117.1698,STANDARD
+92119,San Diego,San Diego County,32.8036,-117.0261,STANDARD
+92120,San Diego,San Diego County,32.7958,-117.0707,STANDARD
+92121,San Diego,San Diego County,32.8919,-117.2035,STANDARD
+92122,San Diego,San Diego County,32.8577,-117.2115,STANDARD
+92123,San Diego,San Diego County,32.7973,-117.1392,STANDARD
+92124,San Diego,San Diego County,32.8201,-117.0986,STANDARD
+92126,San Diego,San Diego County,32.9161,-117.1402,STANDARD
+92127,San Diego,San Diego County,33.0279,-117.0856,STANDARD
+92128,San Diego,San Diego County,33.0067,-117.069,STANDARD
+92129,San Diego,San Diego County,32.9652,-117.1213,STANDARD
+92130,San Diego,San Diego County,32.9555,-117.2252,STANDARD
+92131,San Diego,San Diego County,32.9123,-117.0898,STANDARD
+92134,San Diego,San Diego County,32.7242,-117.1466,UNIQUE
+92139,San Diego,San Diego County,32.6806,-117.0474,STANDARD
+92154,San Diego,San Diego County,32.5753,-117.0707,STANDARD
+92161,San Diego,San Diego County,32.8718,-117.2291,UNIQUE
+92173,San Ysidro,San Diego County,32.5626,-117.043,STANDARD
+92199,San Diego,San Diego County,32.7516,-117.1918,STANDARD
+92201,Indio,Riverside County,33.7207,-116.2168,STANDARD
+92203,Indio,Riverside County,33.7532,-116.2676,STANDARD
+92210,Indian Wells,Riverside County,33.7163,-116.3381,STANDARD
+92211,Palm Desert,Riverside County,33.7644,-116.3398,STANDARD
+92220,Banning,Riverside County,33.9282,-116.8899,STANDARD
+92223,Beaumont,Riverside County,33.9171,-117.0001,STANDARD
+92225,Blythe,Riverside County,33.6103,-114.5963,STANDARD
+92227,Brawley,Imperial County,32.9792,-115.5296,STANDARD
+92230,Cabazon,Riverside County,33.9086,-116.7739,STANDARD
+92231,Calexico,Imperial County,32.6832,-115.5028,STANDARD
+92233,Calipatria,Imperial County,33.167,-115.5114,STANDARD
+92234,Cathedral City,Riverside County,33.8098,-116.4665,STANDARD
+92236,Coachella,Riverside County,33.675,-116.1772,STANDARD
+92240,Desert Hot Springs,Riverside County,33.9531,-116.5219,STANDARD
+92241,Desert Hot Springs,Riverside County,33.8763,-116.354,STANDARD
+92243,El Centro,Imperial County,32.7893,-115.5665,STANDARD
+92249,Heber,Imperial County,32.7218,-115.4383,STANDARD
+92250,Holtville,Imperial County,32.8104,-115.3775,STANDARD
+92251,Imperial,Imperial County,32.847,-115.573,STANDARD
+92253,La Quinta,Riverside County,33.6685,-116.3081,STANDARD
+92254,Mecca,Riverside County,33.545,-116.0187,STANDARD
+92257,Niland,Imperial County,33.3784,-115.6965,STANDARD
+92260,Palm Desert,Riverside County,33.7225,-116.377,STANDARD
+92262,Palm Springs,Riverside County,33.8414,-116.5347,STANDARD
+92264,Palm Springs,Riverside County,33.8018,-116.517,STANDARD
+92270,Rancho Mirage,Riverside County,33.7643,-116.4225,STANDARD
+92274,Thermal,Riverside County,33.5578,-116.1572,STANDARD
+92276,Thousand Palms,Riverside County,33.8082,-116.3713,STANDARD
+92282,Whitewater,Riverside County,33.989,-116.6566,STANDARD
+92283,Winterhaven,Imperial County,33.0549,-115.0698,STANDARD
+92320,Calimesa,Riverside County,33.9946,-117.043,STANDARD
+92501,Riverside,Riverside County,33.9924,-117.3694,STANDARD
+92503,Riverside,Riverside County,33.9208,-117.4589,STANDARD
+92504,Riverside,Riverside County,33.9315,-117.4119,STANDARD
+92505,Riverside,Riverside County,33.9228,-117.4867,STANDARD
+92506,Riverside,Riverside County,33.9455,-117.3757,STANDARD
+92507,Riverside,Riverside County,33.9761,-117.3389,STANDARD
+92508,Riverside,Riverside County,33.8897,-117.3043,STANDARD
+92509,Jurupa Valley,Riverside County,34.0033,-117.445,STANDARD
+92518,March Air Reserve Base,Riverside County,33.8844,-117.2787,STANDARD
+92530,Lake Elsinore,Riverside County,33.6598,-117.3485,STANDARD
+92532,Lake Elsinore,Riverside County,33.6927,-117.303,STANDARD
+92536,Aguanga,Riverside County,33.4473,-116.7997,STANDARD
+92539,Anza,Riverside County,33.5688,-116.7135,STANDARD
+92543,Hemet,Riverside County,33.7416,-116.973,STANDARD
+92544,Hemet,Riverside County,33.739,-116.9243,STANDARD
+92545,Hemet,Riverside County,33.7399,-117.0151,STANDARD
+92548,Homeland,Riverside County,33.7453,-117.1118,STANDARD
+92551,Moreno Valley,Riverside County,33.8814,-117.2261,STANDARD
+92553,Moreno Valley,Riverside County,33.9157,-117.2351,STANDARD
+92555,Moreno Valley,Riverside County,33.9377,-117.1851,STANDARD
+92557,Moreno Valley,Riverside County,33.9553,-117.2457,STANDARD
+92561,Mountain Center,Riverside County,33.7042,-116.7259,STANDARD
+92562,Murrieta,Riverside County,33.5631,-117.2738,STANDARD
+92563,Murrieta,Riverside County,33.569,-117.1783,STANDARD
+92567,Nuevo,Riverside County,33.8123,-117.1048,STANDARD
+92570,Perris,Riverside County,33.7852,-117.3166,STANDARD
+92571,Perris,Riverside County,33.811,-117.218,STANDARD
+92582,San Jacinto,Riverside County,33.7883,-116.9819,STANDARD
+92583,San Jacinto,Riverside County,33.7967,-116.9324,STANDARD
+92584,Menifee,Riverside County,33.6647,-117.1743,STANDARD
+92585,Menifee,Riverside County,33.7467,-117.1721,STANDARD
+92586,Menifee,Riverside County,33.7044,-117.1969,STANDARD
+92587,Menifee,Riverside County,33.707,-117.245,STANDARD
+92590,Temecula,Riverside County,33.4903,-117.1824,STANDARD
+92591,Temecula,Riverside County,33.5217,-117.1286,STANDARD
+92592,Temecula,Riverside County,33.4983,-117.0958,STANDARD
+92595,Wildomar,Riverside County,33.6021,-117.264,STANDARD
+92596,Winchester,Riverside County,33.6243,-117.0885,STANDARD
+92602,Irvine,Orange County,33.7419,-117.7467,STANDARD
+92603,Irvine,Orange County,33.6245,-117.794,STANDARD
+92604,Irvine,Orange County,33.6899,-117.7868,STANDARD
+92606,Irvine,Orange County,33.6951,-117.8224,STANDARD
+92610,Foothill Ranch,Orange County,33.6748,-117.6649,STANDARD
+92612,Irvine,Orange County,33.6607,-117.8264,STANDARD
+92614,Irvine,Orange County,33.6829,-117.8298,STANDARD
+92617,Irvine,Orange County,33.6425,-117.8417,STANDARD
+92618,Irvine,Orange County,33.7074,-117.7054,STANDARD
+92620,Irvine,Orange County,33.7009,-117.7564,STANDARD
+92624,Capistrano Beach,Orange County,33.46,-117.6632,STANDARD
+92625,Corona Del Mar,Orange County,33.6021,-117.8743,STANDARD
+92626,Costa Mesa,Orange County,33.6801,-117.9085,STANDARD
+92627,Costa Mesa,Orange County,33.6483,-117.9155,STANDARD
+92629,Dana Point,Orange County,33.4743,-117.6964,STANDARD
+92630,Lake Forest,Orange County,33.6437,-117.6868,STANDARD
+92637,Laguna Woods,Orange County,33.6103,-117.7253,STANDARD
+92646,Huntington Beach,Orange County,33.6654,-117.9686,STANDARD
+92647,Huntington Beach,Orange County,33.721,-118.0033,STANDARD
+92648,Huntington Beach,Orange County,33.6773,-118.0051,STANDARD
+92649,Huntington Beach,Orange County,33.718,-118.0505,STANDARD
+92651,Laguna Beach,Orange County,33.5429,-117.7813,STANDARD
+92653,Laguna Hills,Orange County,33.5916,-117.6985,STANDARD
+92655,Midway City,Orange County,33.7446,-117.984,STANDARD
+92656,Aliso Viejo,Orange County,33.5701,-117.7086,STANDARD
+92657,Newport Coast,Orange County,33.5943,-117.8334,STANDARD
+92660,Newport Beach,Orange County,33.6295,-117.8684,STANDARD
+92661,Newport Beach,Orange County,33.6045,-117.9021,STANDARD
+92662,Newport Beach,Orange County,33.6062,-117.8931,STANDARD
+92663,Newport Beach,Orange County,33.621,-117.9321,STANDARD
+92672,San Clemente,Orange County,33.4361,-117.6231,STANDARD
+92673,San Clemente,Orange County,33.4615,-117.6375,STANDARD
+92675,San Juan Capistrano,Orange County,33.5085,-117.6565,STANDARD
+92676,Silverado,Orange County,33.7451,-117.6153,STANDARD
+92677,Laguna Niguel,Orange County,33.5145,-117.7084,STANDARD
+92679,Trabuco Canyon,Orange County,33.6625,-117.5903,STANDARD
+92683,Westminster,Orange County,33.7524,-117.9939,STANDARD
+92688,Rancho Santa Margarita,Orange County,33.6512,-117.5938,STANDARD
+92691,Mission Viejo,Orange County,33.6128,-117.6622,STANDARD
+92692,Mission Viejo,Orange County,33.6144,-117.6433,STANDARD
+92694,Ladera Ranch,Orange County,33.5472,-117.6238,STANDARD
+92701,Santa Ana,Orange County,33.7523,-117.8541,STANDARD
+92703,Santa Ana,Orange County,33.7489,-117.9072,STANDARD
+92704,Santa Ana,Orange County,33.7249,-117.909,STANDARD
+92705,Santa Ana,Orange County,33.754,-117.7919,STANDARD
+92706,Santa Ana,Orange County,33.7691,-117.8855,STANDARD
+92707,Santa Ana,Orange County,33.7086,-117.8701,STANDARD
+92708,Fountain Valley,Orange County,33.7102,-117.9503,STANDARD
+92780,Tustin,Orange County,33.7364,-117.8229,STANDARD
+92782,Tustin,Orange County,33.7346,-117.7869,STANDARD
+92799,Santa Ana,Orange County,33.7205,-117.9098,STANDARD
+92801,Anaheim,Orange County,33.8428,-117.9546,STANDARD
+92802,Anaheim,Orange County,33.8085,-117.9228,STANDARD
+92804,Anaheim,Orange County,33.8186,-117.9729,STANDARD
+92805,Anaheim,Orange County,33.8359,-117.9086,STANDARD
+92806,Anaheim,Orange County,33.8356,-117.8681,STANDARD
+92807,Anaheim,Orange County,33.8544,-117.7858,STANDARD
+92808,Anaheim,Orange County,33.8579,-117.7513,STANDARD
+92809,Anaheim,Orange County,33.8426,-117.9388,STANDARD
+92821,Brea,Orange County,33.9291,-117.8845,STANDARD
+92823,Brea,Orange County,33.923,-117.798,STANDARD
+92831,Fullerton,Orange County,33.8873,-117.8946,STANDARD
+92832,Fullerton,Orange County,33.868,-117.9265,STANDARD
+92833,Fullerton,Orange County,33.8766,-117.9551,STANDARD
+92835,Fullerton,Orange County,33.8994,-117.9063,STANDARD
+92840,Garden Grove,Orange County,33.7869,-117.9273,STANDARD
+92841,Garden Grove,Orange County,33.7817,-117.9766,STANDARD
+92843,Garden Grove,Orange County,33.7671,-117.929,STANDARD
+92844,Garden Grove,Orange County,33.7661,-117.9738,STANDARD
+92845,Garden Grove,Orange County,33.7787,-118.0267,STANDARD
+92860,Norco,Riverside County,33.9247,-117.5517,STANDARD
+92861,Villa Park,Orange County,33.8205,-117.8104,STANDARD
+92862,Orange,Orange County,33.7915,-117.714,STANDARD
+92865,Orange,Orange County,33.8263,-117.8511,STANDARD
+92866,Orange,Orange County,33.7877,-117.8423,STANDARD
+92867,Orange,Orange County,33.811,-117.8493,STANDARD
+92868,Orange,Orange County,33.7875,-117.8776,STANDARD
+92869,Orange,Orange County,33.7868,-117.7934,STANDARD
+92870,Placentia,Orange County,33.8744,-117.8543,STANDARD
+92878,Corona,Riverside County,33.8753,-117.5664,STANDARD
+92879,Corona,Riverside County,33.8797,-117.5354,STANDARD
+92880,Corona,Riverside County,33.9208,-117.6096,STANDARD
+92881,Corona,Riverside County,33.8241,-117.5198,STANDARD
+92882,Corona,Riverside County,33.8419,-117.6043,STANDARD
+92883,Corona,Riverside County,33.7541,-117.474,STANDARD
+92886,Yorba Linda,Orange County,33.9058,-117.7865,STANDARD
+92887,Yorba Linda,Orange County,33.8841,-117.7304,STANDARD
+92899,Anaheim,Orange County,33.8373,-117.8712,STANDARD

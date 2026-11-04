@@ -1,0 +1,63 @@
+Test,ZIP,Site group,Service,Language,Matches,Message,Rank,Site key,Site name,Miles,Result type
+1,92105,Public sites,Dental,Any,22.0,,1.0,BPS-H80-004899,La Maestra Dental Clinic,0.6,Match
+1,92105,Public sites,Dental,Any,,,2.0,BPS-H80-008640,La Maestra Family Clinic,0.7,Match
+1,92105,Public sites,Dental,Any,,,3.0,NHSC1980302352,SYHC - South Bay Family Dental Center,3.7,Match
+1,92105,Public sites,Dental,Any,,,4.0,BPS-H80-039311,La Mesa Family Dental Clinic,3.9,Match
+1,92105,Public sites,Dental,Any,,,5.0,BPS-H80-009996,La Maestra Lemon Grove Clinic,3.9,Match
+2,92105,Public sites,Dental,Spanish,21.0,,1.0,BPS-H80-004899,La Maestra Dental Clinic,0.6,Match
+2,92105,Public sites,Dental,Spanish,,,2.0,BPS-H80-008640,La Maestra Family Clinic,0.7,Match
+2,92105,Public sites,Dental,Spanish,,,3.0,NHSC1980302352,SYHC - South Bay Family Dental Center,3.7,Match
+2,92105,Public sites,Dental,Spanish,,,4.0,BPS-H80-039311,La Mesa Family Dental Clinic,3.9,Match
+2,92105,Public sites,Dental,Spanish,,,5.0,BPS-H80-009996,La Maestra Lemon Grove Clinic,3.9,Match
+3,92105,Public sites,Primary care,Arabic,96.0,,1.0,BPS-H80-008640,La Maestra Family Clinic,0.7,Match
+3,92105,Public sites,Primary care,Arabic,,,2.0,NHSC8211437020,La Maestra Family clinic,0.7,Match
+3,92105,Public sites,Primary care,Arabic,,,3.0,BPS-H80-030578,La Maestra City Heights Clinic,0.7,Match
+3,92105,Public sites,Primary care,Arabic,,,4.0,BPS-H80-031782,La Maestra Family Clinic Inc. CCBHC,0.8,Match
+3,92105,Public sites,Primary care,Arabic,,,5.0,BPS-H80-031788,"La Maestra Family Clinic, Inc.",0.8,Match
+4,92066,Health center,Vision,Any,4.0,Only 4 site(s) match. The rest are the nearest health centers; call to ask.,1.0,BPS-H80-009554,Fallbrook Family Health Center,43.7,Match
+4,92066,Health center,Vision,Any,,,2.0,BPS-H80-010116,Diamond Neighborhoods Family Health Center,48.0,Match
+4,92066,Health center,Vision,Any,,,3.0,BPS-H80-001706,Logan Heights Family Health Center,50.7,Match
+4,92066,Health center,Vision,Any,,,4.0,BPS-H80-005050,San Ysidro Health San Ysidro Health Center,54.5,Match
+4,92066,Health center,Vision,Any,,,5.0,NHSC6195690326,Indian Health Council - Santa Ysabel Clinic,8.2,Fallback
+5,92101,Public sites,Urgent care,Any,2.0,Only 2 site(s) match. The rest are the nearest health centers; call to ask.,1.0,BPS-H80-031660,San Ysidro Health Urgent Care,7.5,Match
+5,92101,Public sites,Urgent care,Any,,,2.0,BPS-H80-039620,TrueCare Rancho Sante Fe QuickCare,29.5,Match
+5,92101,Public sites,Urgent care,Any,,,3.0,BPS-H80-012417,Downtown Family Health Center at Connections,0.0,Fallback
+5,92101,Public sites,Urgent care,Any,,,4.0,BPS-H80-037110,San Ysidro Health Senior Dental Center,0.2,Fallback
+5,92101,Public sites,Urgent care,Any,,,5.0,BPS-H80-033903,Fifth Avenue Behavioral Health Center,0.4,Fallback
+6,92590,Public sites,Dental,Any,0.0,Outside San Diego County: out of scope,,,,,
+7,91910,All,Hospice care,Spanish,0.0,No sites match these filters. Showing the nearest health centers instead; call to ask.,1.0,BPS-H80-031173,FamilyHealth--Sweetwater Family Counseling Center,0.7,Fallback
+7,91910,All,Hospice care,Spanish,,,2.0,BPS-H80-031660,San Ysidro Health Urgent Care,0.7,Fallback
+7,91910,All,Hospice care,Spanish,,,3.0,NHSC8859692616,San Ysidro Health - Otay Family Health Center,0.7,Fallback
+7,91910,All,Hospice care,Spanish,,,4.0,BPS-H80-013436,San Ysidro Health Chula Vista,0.7,Fallback
+7,91910,All,Hospice care,Spanish,,,5.0,BPS-H80-008495,Chula Vista Family Health Center,0.9,Fallback
+8,92105,Public sites,Any,Vietnamese,101.0,,1.0,BPS-H80-004899,La Maestra Dental Clinic,0.6,Match
+8,92105,Public sites,Any,Vietnamese,,,2.0,BPS-H80-004528,MID-CITY COMMUNITY CLINIC-PEDIATRICS,0.6,Match
+8,92105,Public sites,Any,Vietnamese,,,3.0,BPS-H80-008640,La Maestra Family Clinic,0.7,Match
+8,92105,Public sites,Any,Vietnamese,,,4.0,NHSC8211437020,La Maestra Family clinic,0.7,Match
+8,92105,Public sites,Any,Vietnamese,,,5.0,BPS-H80-030578,La Maestra City Heights Clinic,0.7,Match
+9,92105,Public sites,Any,Sign language,148.0,,1.0,BPS-H80-004899,La Maestra Dental Clinic,0.6,Match
+9,92105,Public sites,Any,Sign language,,,2.0,BPS-H80-008640,La Maestra Family Clinic,0.7,Match
+9,92105,Public sites,Any,Sign language,,,3.0,NHSC8211437020,La Maestra Family clinic,0.7,Match
+9,92105,Public sites,Any,Sign language,,,4.0,BPS-H80-030578,La Maestra City Heights Clinic,0.7,Match
+9,92105,Public sites,Any,Sign language,,,5.0,BPS-H80-031782,La Maestra Family Clinic Inc. CCBHC,0.8,Match
+10,92091,Public sites,Any,Any,653.0,,1.0,BPS-H80-018301,Neighborhood Healthcare ~ Gold Family Health Center,0.4,Match
+10,92091,Public sites,Any,Any,,,2.0,CMS0000025950,The Hospice Of San Diego,1.3,Match
+10,92091,Public sites,Any,Any,,,3.0,CMS0000070967,BOULDER CREEK POST ACUTE,2.3,Match
+10,92091,Public sites,Any,Any,,,4.0,CMS0000009462,Poway Surgery Center,2.4,Match
+10,92091,Public sites,Any,Any,,,5.0,CMS0000059669,PALOMAR MEDICAL CENTER POWAY,2.5,Match
+11,91910,Public sites,Behavioral health,Tagalog,7.0,,1.0,BPS-H80-013436,San Ysidro Health Chula Vista,0.7,Match
+11,91910,Public sites,Behavioral health,Tagalog,,,2.0,BPS-H80-040313,San Ysidro Health National City,3.0,Match
+11,91910,Public sites,Behavioral health,Tagalog,,,3.0,BPS-H80-005050,San Ysidro Health San Ysidro Health Center,5.5,Match
+11,91910,Public sites,Behavioral health,Tagalog,,,4.0,BPS-H80-036350,La Maestra Behavioral Health Services,8.2,Match
+11,91910,Public sites,Behavioral health,Tagalog,,,5.0,BPS-H80-001425,TrueCare,30.6,Match
+12,92113,Health center,Pediatrics,Spanish,19.0,,1.0,BPS-H80-002013,FHCSD Mobile Medical Unit III,1.3,Match
+12,92113,Health center,Pediatrics,Spanish,,,2.0,BPS-H80-040313,San Ysidro Health National City,2.0,Match
+12,92113,Health center,Pediatrics,Spanish,,,3.0,BPS-H80-007703,North Park Family Health Center II,3.3,Match
+12,92113,Health center,Pediatrics,Spanish,,,4.0,BPS-H80-004528,MID-CITY COMMUNITY CLINIC-PEDIATRICS,3.7,Match
+12,92113,Health center,Pediatrics,Spanish,,,5.0,BPS-H80-036859,San Ysidro Health South Bay Pediatrics,4.1,Match
+13,92101,Hospital,Any,Any,28.0,,1.0,CMS0000055488,US NAVY MEDICAL CENTER SAN DIEGO,1.0,Match
+13,92101,Hospital,Any,Any,,,2.0,CMS0000060307,SHARP CORONADO HOSPITAL AND HLTHCR CTR,1.8,Match
+13,92101,Hospital,Any,Any,,,3.0,CMS0000062352,SELECT SPECIALTY HOSPITAL - SAN DIEGO,2.2,Match
+13,92101,Hospital,Any,Any,,,4.0,CMS0000060283,SCRIPPS MERCY HOSPITAL,2.3,Match
+13,92101,Hospital,Any,Any,,,5.0,CMS0000061125,UC SAN DIEGO HEALTH HILLCREST - HILLCREST MED CTR,2.5,Match
+14,00000,Public sites,Any,Any,0.0,ZIP not found in the list,,,,,
