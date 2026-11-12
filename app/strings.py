@@ -12,6 +12,19 @@ EN = {
     "language_label": "Language",
     "translation_coming": "This language is coming soon. Showing English for now.",
 
+    # Home page
+    "hero_title": "Find a clinic near you",
+    "hero_sub": "Free, no sign-in. Tell us your ZIP code and what you need.",
+    "trust_free": "Free to use",
+    "trust_private": "No sign-in or personal info",
+    "trust_sites": "{n} care sites in San Diego County",
+    "quick_title": "Popular needs",
+    "more_filters": "More filters",
+    "results_title": "Results",
+    "call_short": "Call",
+    "badge_checked": "Details checked",
+    "badge_confirm": "Call to confirm",
+
     # Search form
     "zip_label": "ZIP code",
     "zip_placeholder": "e.g. 92105",

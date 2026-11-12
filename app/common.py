@@ -58,3 +58,28 @@ def load_options():
 def md_safe(text):
     """Stop '$' in clinic names or notes from being read as math by Streamlit."""
     return (text or "").replace("$", "\\$")
+
+
+@st.cache_data
+def public_site_count():
+    """How many sites the default 'Public sites' choice covers (for the trust line)."""
+    conn = new_connection()
+    try:
+        return list_all(conn, site_group="Public sites")["matches"]
+    finally:
+        conn.close()
+
+
+_KEEP_UPPER = {"LLC", "INC", "HIV", "UCSD", "PACE", "VA", "II", "III", "IV", "SD", "CA", "USA", "LGBTQ", "STD", "ER"}
+
+
+def display_name(name):
+    """Some names in the data are ALL CAPS. Show them in normal capitalization."""
+    name = name or ""
+    if not name.isupper():
+        return name
+    words = []
+    for word in name.split(" "):
+        bare = word.strip(".,()&-/")
+        words.append(word if bare in _KEEP_UPPER else word.capitalize() if word else word)
+    return " ".join(words)
