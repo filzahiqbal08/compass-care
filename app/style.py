@@ -11,7 +11,9 @@ CSS = """
 :root{--navy:#1d2a6e;--blue:#1f6fd0;--sky:#e8f1fd;--ink:#1c2a4a;--muted:#5a6a88;--line:#dbe4f3;--green:#1e9e63}
 
 /* page width and breathing room */
-[data-testid="stMainBlockContainer"]{max-width:880px;padding-top:1.6rem;padding-bottom:3rem}
+[data-testid="stMainBlockContainer"]{max-width:880px;padding-top:4.6rem;padding-bottom:3rem}
+/* Streamlit's own top bar (Fork / GitHub on the live site): match the page color */
+[data-testid="stHeader"]{background:#f3f7fd}
 h1,h2,h3,h5{letter-spacing:-0.01em;color:var(--navy)}
 
 /* logo + name */
